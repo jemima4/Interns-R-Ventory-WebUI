@@ -1,6 +1,6 @@
 <div class="rv-breadcrumbs">
   <nav>
-    <ol class="breadcrumb">
+    <ol class="rv-breadcrumb-items">
       <li
         *ngFor="
           let breadcrumb of breadcrumbs$ | async;
@@ -13,7 +13,7 @@
 
         <a *ngIf="first" [routerLink]="breadcrumb.url">
           <span>
-            <img src="../../../../assets/icons/home.svg" alt="home page icon" />
+            <img src="/assets/icons/home.svg" alt="home page icon" />
           </span>
           <span> / </span>
         </a>

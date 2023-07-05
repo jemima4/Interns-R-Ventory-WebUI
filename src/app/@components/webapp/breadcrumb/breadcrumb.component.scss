@@ -1,13 +1,18 @@
 .rv-breadcrumbs {
-  .breadcrumb {
+  .rv-breadcrumb-items {
     height: 2rem;
-    // background-color: coral;
-    justify-content: start;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem 0.75rem 0;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #ffffff;
+    border-radius: 0.25rem;
 
     & a {
       text-decoration: none;
-      padding-right: 1rem;
+      padding-right: 0.2rem;
+      font-weight: 400;
 
       @media only screen and (max-width: 768px) {
         font-size: 10px;
@@ -16,11 +21,15 @@
     }
     span {
       padding-left: 1rem;
+      font-weight: 400;
 
       @media only screen and (max-width: 768px) {
         font-size: 8px;
         padding-right: 0.1rem;
       }
+    }
+    img {
+      margin-bottom: 0.2rem;
     }
   }
 }
