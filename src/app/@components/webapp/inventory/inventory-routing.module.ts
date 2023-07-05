@@ -11,13 +11,19 @@ const routes: Routes = [
     children: [
       {
         path: 'products-category',
-        component: ProductsCategoryComponent,
         data: { breadcrumb: 'Products Categories' },
+        loadChildren: () =>
+          import(
+            'src/app/@components/webapp/inventory/products-category/products-category.module'
+          ).then((m) => m.ProductsCategoryModule),
       },
       {
         path: 'warehouse',
-        component: WarehouseComponent,
         data: { breadcrumb: 'Warehouse' },
+        loadChildren: () =>
+          import(
+            'src/app/@components/webapp/inventory/warehouse/warehouse.module'
+          ).then((m) => m.WarehouseModule),
       },
     ],
   },

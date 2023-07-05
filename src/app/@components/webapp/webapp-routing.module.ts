@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { WebappComponent } from './webapp.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProcurementComponent } from './procurement/procurement.component';
 
 const routes: Routes = [
   {
@@ -22,8 +21,11 @@ const routes: Routes = [
       },
       {
         path: 'procurement',
-        component: ProcurementComponent,
         data: { breadcrumb: 'Procurement' },
+        loadChildren: () =>
+          import(
+            'src/app/@components/webapp/procurement/procurement.module'
+          ).then((m) => m.ProcurementModule),
       },
       {
         path: 'inventory',
