@@ -12,6 +12,7 @@ import { ProductsCategoryComponent } from './inventory/products-category/product
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { HeaderComponent } from './header/header.component';
 
+
 @NgModule({
   declarations: [
     WebappComponent,
@@ -22,6 +23,7 @@ import { HeaderComponent } from './header/header.component';
     ProductsCategoryComponent,
     BreadcrumbComponent,
     HeaderComponent,
+   
   ],
   imports: [CommonModule, WebappRoutingModule, MaterialModule],
 })

@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { WarehouseComponent } from './warehouse/warehouse.component';
 import { InventoryRoutingModule } from './inventory-routing.module';
 import { NewWarehouseComponent } from './warehouse/new-warehouse/new-warehouse.component';
+import { HeaderComponent } from '../header/header.component';
 
 @NgModule({
   declarations: [WarehouseComponent, NewWarehouseComponent],
