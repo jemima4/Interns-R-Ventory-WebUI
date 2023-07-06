@@ -1,27 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-new-warehouse',
   templateUrl: './new-warehouse.component.html',
-  styleUrls: ['./new-warehouse.component.scss']
+  styleUrls: ['./new-warehouse.component.scss'],
 })
-export class NewWarehouseComponent implements OnInit{
-   myForm!:FormGroup;
+export class NewWarehouseComponent implements OnInit {
+  warehouseForm!: FormGroup;
 
-  constructor(private formBuilder:FormBuilder){}
+  constructor(
+    private formBuilder: FormBuilder,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    public dialogRef: MatDialogRef<NewWarehouseComponent>
+  ) {}
 
   ngOnInit() {
-    this.myForm = this.formBuilder.group({
+    this.warehouseForm = this.formBuilder.group({
       warehouseName: ['', Validators.required],
-      warehouseCode: ['',Validators.required]
+      warehouseCode: ['', Validators.required],
     });
   }
 
+  // onSubmitForm(){
+  //   if (this.warehouseForm.valid){
+  //     console.log(this.warehouseForm.value);
+  //   }
+  // }
+  addWarehouse(){
+    console.log(this.warehouseForm.value);
+  }
+  closeDialog() {
+    this.dialogRef.close();
+  }
 
-  onSubmitForm(){
-    if (this.myForm.valid){
-      console.log(this.myForm.value);
-    }
+  cancelDialogue(){
+      console.log('Cancel button clicked');
   }
 }

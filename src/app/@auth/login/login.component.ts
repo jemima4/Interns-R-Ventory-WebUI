@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 export class LoginComponent {
   loginForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router:Router) {}
 
   ngOnInit() {
     this.buildLoginForm();
@@ -18,8 +19,16 @@ export class LoginComponent {
 
   buildLoginForm() {
     this.loginForm = this.fb.group({
-      email: [null, [Validators.required, Validators.email]],
+      username: [null, [Validators.required, Validators.email]],
       password: [null, [Validators.required]],
     });
   }
+
+  onSubmitForm() {
+    if (this.loginForm.valid) {
+      console.log('Valid form submitted');
+    }
+  }
+
+ 
 }
