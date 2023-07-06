@@ -1,5 +1,11 @@
 #rv-header {
   .rv-navbar {
     justify-content: space-between;
+    border-bottom: 1px solid #afacac;
+    background: #ffffff3b;
+
+    span {
+      margin-left: 1rem;
+    }
   }
 }

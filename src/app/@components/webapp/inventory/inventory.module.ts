@@ -1,15 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from 'src/app/@core/styles/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { WarehouseComponent } from './warehouse/warehouse.component';
 import { InventoryRoutingModule } from './inventory-routing.module';
-import { NewWarehouseComponent } from './warehouse/new-warehouse/new-warehouse.component';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderModule } from '../header/header.module';
+import { ProductsCategoryModule } from './products-category/products-category.module';
+import { WarehouseModule } from './warehouse/warehouse.module';
+import { InventoryComponent } from './inventory.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [WarehouseComponent, NewWarehouseComponent],
-  imports: [CommonModule, InventoryRoutingModule, MaterialModule,ReactiveFormsModule],
-  exports: [WarehouseComponent],
+  declarations: [InventoryComponent],
+  imports: [
+    CommonModule,
+    InventoryRoutingModule,
+    ReactiveFormsModule,
+    HeaderModule,
+    ProductsCategoryModule,
+    WarehouseModule,
+    RouterModule,
+  ],
 })
 export class InventoryModule {}
