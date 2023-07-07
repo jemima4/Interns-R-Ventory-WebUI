@@ -11,7 +11,7 @@
 
     & a {
       text-decoration: none;
-      padding-right: 0.2rem;
+      padding-right: 0.1rem;
       font-weight: 400;
 
       @media only screen and (max-width: 768px) {
@@ -20,7 +20,7 @@
       }
     }
     span {
-      padding-left: 1rem;
+      padding-left: 0.1rem;
       font-weight: 400;
 
       @media only screen and (max-width: 768px) {
@@ -31,5 +31,9 @@
     img {
       margin-bottom: 0.2rem;
     }
+  }
+
+  .uniq {
+    padding-right: 0.6rem;
   }
 }

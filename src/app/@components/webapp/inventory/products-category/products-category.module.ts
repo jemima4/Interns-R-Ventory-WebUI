@@ -12,6 +12,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [ProductsCategoryComponent, AddNewCategoryComponent],
@@ -27,6 +28,7 @@ import { MatTableModule } from '@angular/material/table';
     MatButtonModule,
     MatCheckboxModule,
     MatTableModule,
+    MatInputModule,
   ],
   exports: [ProductsCategoryComponent],
   entryComponents: [AddNewCategoryComponent],

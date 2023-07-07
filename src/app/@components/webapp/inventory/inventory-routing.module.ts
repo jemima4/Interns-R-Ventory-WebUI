@@ -10,8 +10,8 @@ const routes: Routes = [
     component: InventoryComponent,
     children: [
       {
-        path: 'products-category',
-        data: { breadcrumb: 'Products Categories' },
+        path: 'product-category',
+        data: { breadcrumb: 'Product Category' },
         loadChildren: () =>
           import(
             'src/app/@components/webapp/inventory/products-category/products-category.module'

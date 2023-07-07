@@ -2,7 +2,7 @@
   <div class="rv-sidenav" [ngClass]="collapsed ? 'rv-sidenav-collapsed' : ''">
     <div class="rv-logo-container">
       <button class="rv-logo" (click)="toggleCollapse()">R</button>
-      <div class="rv-logo-text" @fadeInOut *ngIf="collapsed">Reventory</div>
+      <div class="rv-logo-text" @titleFade *ngIf="collapsed">R-ventory</div>
       <button class="rv-btn-close" *ngIf="collapsed" (click)="closeSidenav()">
         <span class="material-icons rv-icon">close</span>
       </button>
@@ -150,9 +150,9 @@
 
             <div class="inner-links">
               <a
-                [routerLink]="['inventory', 'products-category']"
+                [routerLink]="['inventory', 'product-category']"
                 (click)="toggleCollapse()"
-                >Products Category</a
+                >Product Category</a
               >
             </div>
 
