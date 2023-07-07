@@ -1,6 +1,7 @@
-#test-modal {
+#new-warehouse {
   border-radius: 2.75rem;
-  .test-modal-header {
+
+  .new-warehouse-header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -8,21 +9,13 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     align-items: center;
-
     margin-bottom: 1.25rem;
   }
+
   .paragraph {
     margin-bottom: 1.75rem;
   }
 
-  // .warehouse-container{
-  //   width: 100%;
-  //   display: flex;
-  //   flex-direction: column;
-
-  .row2 {
-    width: 100%;
-  }
 
   .actions {
     gap: 0.6rem;
@@ -31,19 +24,5 @@
     align-items: flex-start;
     align-self: stretch;
     width: 100%;
-
-    button {
-      flex: 1;
-      border-radius: 0.75rem;
-    }
-
-    .add {
-      background: var(--zns-white-primary, #5570f1);
-      color: white;
-    }
-    .cancel {
-      color: var(--zns-white-primary, #5570f1);
-    }
   }
 }
-

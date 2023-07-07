@@ -1,8 +1,17 @@
-
-div {
- display:flex;
- justify-content: flex-end;
- button{
-          background: var(--zns-white-primary, #5570f1);
- }
+#warehouse {
+  width: 100%;
+  .cta-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  //   .table-header {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: space-between;
+  //     .filter-container {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: space-between;
+  //     }
+  //   }
 }

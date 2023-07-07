@@ -32,7 +32,7 @@
   .form-container {
     width: 100%;
     .row{
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
     gap:0.5rem;
     border-radius: 0.25rem;
   }
@@ -42,8 +42,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 0.75rem;
-    background: var(--zns-white-primary, #5570F1);
     margin-bottom: 2rem;
+     width: 100%;
   }
   }
   .forgot-password-link{
