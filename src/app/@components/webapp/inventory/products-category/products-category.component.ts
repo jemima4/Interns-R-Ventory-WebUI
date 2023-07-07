@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
 
 export interface Category {
-  check: true;
+  check: boolean;
   category: string;
   createdBy: string;
   date: Date;
@@ -15,7 +15,7 @@ export interface Category {
   action: boolean;
 }
 
-const dummyData: any[] = [
+const dummyData: Category[] = [
   {
     check: false,
     category: 'Casual Shoes',
