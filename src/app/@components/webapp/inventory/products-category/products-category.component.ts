@@ -15,6 +15,69 @@ export interface Category {
   action: boolean;
 }
 
+const dummyData: any[] = [
+  {
+    check: false,
+    category: 'Casual Shoes',
+    createdBy: 'Kola',
+    date: new Date(),
+    lastToUpdate: 'Fatima',
+    updated: new Date(),
+    status: true,
+    action: false,
+  },
+  {
+    check: true,
+    category: 'Casual Shoes',
+    createdBy: 'Faruq',
+    date: new Date(),
+    lastToUpdate: 'Fatima',
+    updated: new Date(),
+    status: true,
+    action: false,
+  },
+  {
+    check: false,
+    category: 'Casual Shoes',
+    createdBy: 'Fatimah',
+    date: new Date(),
+    lastToUpdate: 'Fatima',
+    updated: new Date(),
+    status: true,
+    action: false,
+  },
+  {
+    check: true,
+    category: 'Casual Shoes',
+    createdBy: 'Naveedah',
+    date: new Date(),
+    lastToUpdate: 'Fatima',
+    updated: new Date(),
+    status: true,
+    action: false,
+  },
+  {
+    check: true,
+    category: 'Casual Shoes',
+    createdBy: 'Mareh',
+    date: new Date(),
+    lastToUpdate: 'Fatima',
+    updated: new Date(),
+    status: true,
+    action: false,
+  },
+  {
+    check: false,
+    category: 'Casual Shoes',
+    createdBy: 'Abuchi',
+    date: new Date(),
+    lastToUpdate: 'Fatima',
+    updated: new Date(),
+    status: true,
+    action: false,
+  },
+];
+
 @Component({
   selector: 'app-products-category',
   templateUrl: './products-category.component.html',
@@ -26,81 +89,18 @@ export class ProductsCategoryComponent implements OnInit, OnDestroy {
 
   // Table data
   displayedColumns: string[] = [
-    'select',
-    'Categorie',
-    'Created By',
-    'Created Date',
-    'Last Updated By',
+    'check',
+    'category',
+    'createdBy',
+    'date',
+    'lastToUpdate',
     'status',
-    'Action',
+    'action',
   ];
-  datasource: MatTableDataSource<any[]> | null = null;
-
-  dummyData: any[] = [
-    {
-      check: true,
-      category: 'Casual Shoes',
-      createdBy: 'Kola',
-      date: new Date(),
-      lastToUpdate: 'Fatima',
-      updated: new Date(),
-      status: true,
-      action: false,
-    },
-    {
-      check: true,
-      category: 'Casual Shoes',
-      createdBy: 'Kola',
-      date: new Date(),
-      lastToUpdate: 'Fatima',
-      updated: new Date(),
-      status: true,
-      action: false,
-    },
-    {
-      check: true,
-      category: 'Casual Shoes',
-      createdBy: 'Kola',
-      date: new Date(),
-      lastToUpdate: 'Fatima',
-      updated: new Date(),
-      status: true,
-      action: false,
-    },
-    {
-      check: true,
-      category: 'Casual Shoes',
-      createdBy: 'Kola',
-      date: new Date(),
-      lastToUpdate: 'Fatima',
-      updated: new Date(),
-      status: true,
-      action: false,
-    },
-    {
-      check: true,
-      category: 'Casual Shoes',
-      createdBy: 'Kola',
-      date: new Date(),
-      lastToUpdate: 'Fatima',
-      updated: new Date(),
-      status: true,
-      action: false,
-    },
-    {
-      check: true,
-      category: 'Casual Shoes',
-      createdBy: 'Kola',
-      date: new Date(),
-      lastToUpdate: 'Fatima',
-      updated: new Date(),
-      status: true,
-      action: false,
-    },
-  ];
+  datasource: Category[] = [];
 
   ngOnInit(): void {
-    this.datasource = new MatTableDataSource(this.dummyData);
+    this.datasource = dummyData;
   }
 
   openForm() {
