@@ -9,9 +9,8 @@
     </div>
 
     <ul class="rv-sidenav-nav">
-      <li class="rv-sidenav-nav-item">
+      <li class="rv-sidenav-nav-item" (click)="toggleCollapse()">
         <a
-          href=""
           class="rv-sidenav-nav-link"
           [routerLink]="['dashboard']"
           routerLinkActive="active"
@@ -25,7 +24,7 @@
           /></span>
 
           <span class="rv-sidenav-link-text" @fadeInOut *ngIf="collapsed"
-            >dashboard</span
+            >Dashboard</span
           >
         </a>
       </li>
