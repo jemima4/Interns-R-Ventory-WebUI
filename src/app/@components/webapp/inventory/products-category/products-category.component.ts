@@ -24,7 +24,7 @@ const dummyData: Category[] = [
     lastToUpdate: 'Fatima',
     updated: new Date(),
     status: true,
-    action: false,
+    action: true,
   },
   {
     check: true,
@@ -33,7 +33,7 @@ const dummyData: Category[] = [
     date: new Date(),
     lastToUpdate: 'Fatima',
     updated: new Date(),
-    status: true,
+    status: false,
     action: false,
   },
   {
@@ -64,7 +64,7 @@ const dummyData: Category[] = [
     lastToUpdate: 'Fatima',
     updated: new Date(),
     status: true,
-    action: false,
+    action: true,
   },
   {
     check: false,
@@ -73,8 +73,8 @@ const dummyData: Category[] = [
     date: new Date(),
     lastToUpdate: 'Fatima',
     updated: new Date(),
-    status: true,
-    action: false,
+    status: false,
+    action: true,
   },
 ];
 
