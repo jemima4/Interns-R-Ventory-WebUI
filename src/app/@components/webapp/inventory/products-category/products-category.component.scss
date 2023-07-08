@@ -100,3 +100,9 @@
     width: 100%;
   }
 }
+
+.two-column {
+  @media (max-width: 768px) {
+    margin-top: 0.8rem;
+  }
+}
