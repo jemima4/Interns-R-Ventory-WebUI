@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 interface SideNavToggle {
   screenWidth: number;
@@ -13,6 +14,7 @@ interface SideNavToggle {
 export class WebappComponent {
   isSideNavCollapsed = false;
   screenWidth = 0;
+  @ViewChild(SidebarComponent) sidebar!: SidebarComponent;
 
   onToggleSideNav(data: SideNavToggle) {
     this.screenWidth = data.screenWidth;
@@ -23,13 +25,11 @@ export class WebappComponent {
     let styleClass = '';
     if (this.isSideNavCollapsed && this.screenWidth > 788) {
       styleClass = 'body-trimmed';
-    } else if (
-      this.isSideNavCollapsed &&
-      this.screenWidth <= 768 &&
-      this.screenWidth > 0
-    ) {
-      styleClass = 'body-md-screen';
     }
     return styleClass;
+  }
+
+  mobileToggle() {
+    this.sidebar.mobileView();
   }
 }

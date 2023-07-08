@@ -1,7 +1,11 @@
 <section id="webapp">
-  <app-sidebar (onToggleSideNav)="onToggleSideNav($event)"></app-sidebar>
+  <app-sidebar
+    #sidebar
+    (onToggleSideNav)="onToggleSideNav($event)"
+  ></app-sidebar>
 
   <div class="body" [ngClass]="getBodyClass()">
     <router-outlet></router-outlet>
   </div>
 </section>
+<span class="material-icons mobile-burger" (click)="mobileToggle()">menu</span>

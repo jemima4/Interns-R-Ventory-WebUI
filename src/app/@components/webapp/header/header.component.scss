@@ -4,8 +4,17 @@
     border-bottom: 1px solid #efeff0;
     background: #ffffff3b;
 
+    .page-title {
+      @media (max-width: 768px) {
+        margin-left: 2rem;
+      }
+    }
+
     span {
       margin-left: 1rem;
     }
+  }
+  .breader {
+    margin-left: 0.8rem;
   }
 }

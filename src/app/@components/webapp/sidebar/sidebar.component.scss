@@ -1,4 +1,4 @@
-#rv-sidebar {
+.rv-sidebar {
   .rv-sidenav {
     background: #ffffff;
     transition: all 0.5s ease;
@@ -9,6 +9,7 @@
     height: 100%;
     // box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
     border-right: 1px solid #efeff0;
+    // display: none;
 
     .rv-logo-container {
       display: flex;
@@ -34,6 +35,9 @@
         font-size: 1.2rem;
         font-weight: 700;
         color: #242424;
+        // width: 6rem;
+        height: 2rem;
+        overflow: hidden;
       }
 
       .rv-btn-close {
@@ -136,5 +140,19 @@
   .mat-expansion-panel {
     border: none;
     box-shadow: none;
+  }
+
+  // menu toggle
+  .toggle-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.close-rv-sidebar {
+  @media (max-width: 768px) {
+    display: none;
+    transition: display 1500ms ease;
   }
 }

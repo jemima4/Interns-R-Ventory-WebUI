@@ -1,8 +1,16 @@
-<section id="rv-sidebar">
-  <div class="rv-sidenav" [ngClass]="collapsed ? 'rv-sidenav-collapsed' : ''">
+<section
+  class="rv-sidebar"
+  [ngClass]="mobile_close ? 'close-rv-sidebar' : ''"
+  @fadeInOut
+>
+  <div
+    #sidenav
+    class="rv-sidenav"
+    [ngClass]="collapsed ? 'rv-sidenav-collapsed' : ''"
+  >
     <div class="rv-logo-container">
       <button class="rv-logo" (click)="toggleCollapse()">R</button>
-      <div class="rv-logo-text" @titleFade *ngIf="collapsed">R-ventory</div>
+      <div class="rv-logo-text" @fadeInOut *ngIf="collapsed">R-ventory</div>
       <button class="rv-btn-close" *ngIf="collapsed" (click)="closeSidenav()">
         <span class="material-icons rv-icon">close</span>
       </button>
