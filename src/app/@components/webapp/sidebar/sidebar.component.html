@@ -9,8 +9,12 @@
     [ngClass]="collapsed ? 'rv-sidenav-collapsed' : ''"
   >
     <div class="rv-logo-container">
-      <button class="rv-logo" (click)="toggleCollapse()">R</button>
-      <div class="rv-logo-text" @fadeInOut *ngIf="collapsed">R-ventory</div>
+      <button class="rv-logo fw-900 zns-heading-5" (click)="toggleCollapse()">
+        R
+      </button>
+      <div class="rv-logo-text zns-heading-6" @fadeInOut *ngIf="collapsed">
+        R-ventory
+      </div>
       <button class="rv-btn-close" *ngIf="collapsed" (click)="closeSidenav()">
         <span class="material-icons rv-icon">close</span>
       </button>
@@ -25,7 +29,7 @@
           [routerLinkActiveOptions]="{ exact: true }"
         >
           <!-- <span class="material-icons rv-sidenav-link-icon">dashboard</span> -->
-          <span class="rv-sidenav-link-icon icon"
+          <span class="rv-sidenav-link-icon icon zns-heading-5"
             ><img
               src="../../../../assets/icons/dashboard.svg"
               alt="dashboard-icon"
@@ -51,31 +55,43 @@
           <mat-expansion-panel *ngIf="collapsed">
             <mat-expansion-panel-header>
               <!-- <span class="material-icons rv-sidenav-link-icon">dataset</span> -->
-              <span class="rv-sidenav-link-icon icon"
+              <span class="rv-sidenav-link-icon icon zns-heading-5"
                 ><img
                   src="../../../../assets/icons/sales-module.svg"
                   alt="sales-icon"
               /></span>
 
-              <span class="rv-sidenav-link-text" @fadeInOut *ngIf="collapsed"
+              <span
+                class="rv-sidenav-link-text text-below"
+                @fadeInOut
+                *ngIf="collapsed"
                 >Sales</span
               >
             </mat-expansion-panel-header>
 
             <div class="inner-links">
-              <a [routerLink]="['procurement']" (click)="toggleCollapse()"
+              <a
+                class="zns-para-1 fw-400"
+                [routerLink]="['procurement']"
+                (click)="toggleCollapse()"
                 >Sales quotation</a
               >
             </div>
 
             <div class="inner-links">
-              <a [routerLink]="['procurement']" (click)="toggleCollapse()"
+              <a
+                class="zns-para-1 fw-400 fw-400"
+                [routerLink]="['procurement']"
+                (click)="toggleCollapse()"
                 >Customers</a
               >
             </div>
 
             <div class="inner-links">
-              <a [routerLink]="['procurement']" (click)="toggleCollapse()"
+              <a
+                class="zns-para-1 fw-400 fw-400"
+                [routerLink]="['procurement']"
+                (click)="toggleCollapse()"
                 >Goods Delivered</a
               >
             </div>
@@ -86,7 +102,9 @@
         <li class="rv-sidenav-nav-item">
           <a class="rv-sidenav-nav-link" *ngIf="!collapsed">
             <!-- <span class="material-icons rv-sidenav-link-icon">description</span> -->
-            <span class="rv-sidenav-link-icon icon" (click)="toggleCollapse()"
+            <span
+              class="rv-sidenav-link-icon icon zns-heading-5"
+              (click)="toggleCollapse()"
               ><img
                 src="../../../../assets/icons/procurement.svg"
                 alt="procurement-icon"
@@ -96,31 +114,43 @@
           <mat-expansion-panel *ngIf="collapsed">
             <mat-expansion-panel-header>
               <!-- <span class="material-icons rv-sidenav-link-icon">description</span> -->
-              <span class="rv-sidenav-link-icon icon"
+              <span class="rv-sidenav-link-icon icon zns-heading-5"
                 ><img
                   src="../../../../assets/icons/procurement.svg"
                   alt="procurement-icon"
               /></span>
 
-              <span class="rv-sidenav-link-text" @fadeInOut *ngIf="collapsed"
+              <span
+                class="rv-sidenav-link-text text-below"
+                @fadeInOut
+                *ngIf="collapsed"
                 >Procurement</span
               >
             </mat-expansion-panel-header>
 
             <div class="inner-links">
-              <a [routerLink]="['procurement']" (click)="toggleCollapse()"
+              <a
+                class="zns-para-1 fw-400"
+                [routerLink]="['procurement']"
+                (click)="toggleCollapse()"
                 >Purchase Request</a
               >
             </div>
 
             <div class="inner-links">
-              <a [routerLink]="['procurement']" (click)="toggleCollapse()"
+              <a
+                class="zns-para-1 fw-400"
+                [routerLink]="['procurement']"
+                (click)="toggleCollapse()"
                 >Vendors</a
               >
             </div>
 
             <div class="inner-links">
-              <a [routerLink]="['procurement']" (click)="toggleCollapse()"
+              <a
+                class="zns-para-1 fw-400"
+                [routerLink]="['procurement']"
+                (click)="toggleCollapse()"
                 >Goods Received</a
               >
             </div>
@@ -131,7 +161,9 @@
         <li class="rv-sidenav-nav-item">
           <a class="rv-sidenav-nav-link" *ngIf="!collapsed">
             <!-- <span class="material-icons rv-sidenav-link-icon">inventory</span> -->
-            <span class="rv-sidenav-link-icon icon" (click)="toggleCollapse()"
+            <span
+              class="rv-sidenav-link-icon icon zns-heading-5"
+              (click)="toggleCollapse()"
               ><img
                 src="../../../../assets/icons/inventory.svg"
                 alt="inventory-icon"
@@ -145,19 +177,26 @@
                   src="../../../../assets/icons/inventory.svg"
                   alt="Inventory-icon"
               /></span>
-              <span class="rv-sidenav-link-text" @fadeInOut *ngIf="collapsed"
+              <span
+                class="rv-sidenav-link-text text-below"
+                @fadeInOut
+                *ngIf="collapsed"
                 >Inventory</span
               >
             </mat-expansion-panel-header>
 
             <div class="inner-links">
-              <a [routerLink]="['procurement']" (click)="toggleCollapse()"
+              <a
+                class="zns-para-1"
+                [routerLink]="['procurement']"
+                (click)="toggleCollapse()"
                 >Products</a
               >
             </div>
 
             <div class="inner-links">
               <a
+                class="zns-para-1 fw-400"
                 [routerLink]="['inventory', 'product-category']"
                 (click)="toggleCollapse()"
                 >Product Category</a
@@ -166,6 +205,7 @@
 
             <div class="inner-links">
               <a
+                class="zns-para-1 fw-400"
                 [routerLink]="['inventory', 'warehouse']"
                 (click)="toggleCollapse()"
                 >Warehouse</a
@@ -173,7 +213,10 @@
             </div>
 
             <div class="inner-links">
-              <a [routerLink]="['procurement']" (click)="toggleCollapse()"
+              <a
+                class="zns-para-1 fw-400"
+                [routerLink]="['procurement']"
+                (click)="toggleCollapse()"
                 >Internal Transfer</a
               >
             </div>

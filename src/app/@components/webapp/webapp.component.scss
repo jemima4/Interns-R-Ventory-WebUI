@@ -25,4 +25,9 @@
   position: absolute;
   top: 1rem;
   left: 0.3rem;
+  border: 1px solid gray;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
 }
