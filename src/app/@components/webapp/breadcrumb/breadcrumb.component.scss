@@ -1,3 +1,5 @@
+@use "src/app/@core/styles/abstracts/media-query" as *;
+
 .rv-breadcrumbs {
   .rv-breadcrumb-items {
     height: 2rem;
@@ -12,18 +14,16 @@
     & a {
       text-decoration: none;
       padding-right: 0.1rem;
-     
 
-      @media only screen and (max-width: 768px) {
+      @include zns-media-query-max(zns-sm) {
         font-size: 0.9rem;
         padding-right: 0.3rem;
       }
     }
     span {
       padding-left: 0.1rem;
-    
 
-      @media only screen and (max-width: 768px) {
+      @include zns-media-query-max(zns-sm) {
         font-size: 0.8rem;
         padding-right: 0.1rem;
       }

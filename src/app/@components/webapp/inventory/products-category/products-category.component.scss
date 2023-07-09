@@ -1,10 +1,12 @@
+@use "src/app/@core/styles/abstracts/media-query" as *;
+
 #Product-category {
   .create-btn-container {
     display: flex;
     justify-content: right;
 
     .mob-change {
-      @media (max-width: 799px) {
+      @include zns-media-query-max(zns-sm) {
         font-size: 0.7rem !important;
       }
     }
@@ -67,7 +69,7 @@
       width: 95%;
       margin: 0 auto;
       margin-bottom: -1.6rem;
-      @media (max-width: 636px) {
+      @include zns-media-query-max(zns-sm) {
         flex-direction: column;
       }
 
@@ -81,7 +83,7 @@
     .table-title {
       line-height: normal;
       font-size: 1rem;
-      @media (max-width: 636px) {
+      @include zns-media-query-max(zns-sm) {
         margin-bottom: 0.5rem;
       }
     }
@@ -102,13 +104,13 @@
   cursor: pointer;
 }
 .search-input {
-  @media (max-width: 636px) {
+  @include zns-media-query-max(zns-sm) {
     width: 100%;
   }
 }
 
 .two-column {
-  @media (max-width: 768px) {
+  @include zns-media-query-max(zns-sm) {
     margin-top: 0.8rem;
   }
 }
