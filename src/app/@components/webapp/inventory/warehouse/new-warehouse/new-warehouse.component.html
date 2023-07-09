@@ -11,7 +11,7 @@
     <p class="zns-para-1">WareHouse Information</p>
   </div>
 
-  <form [formGroup]="warehouseForm">
+  <form [formGroup]="warehouseForm" (ngSubmit)="submitForm()">
     <div class="row">
       <div class="col-12">
         <div class="input-style1 input-md">
@@ -41,7 +41,8 @@
     <div class="actions">
       <button
         matRipple
-        class="btn zns-btn-primary-outline zns-btn-md zns-btn-full"
+        class="btn zns-btn-primary-outline zns-btn-md zns-btn-full mb-4"
+        (click)="closeDialog()"
       >
         Cancel
       </button>

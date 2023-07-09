@@ -1,17 +1,91 @@
+@use "../.././../../@core/styles/abstracts/media-query" as *;
+
 #warehouse {
   width: 100%;
+
+  @include zns-media-query-max(zns-sm) {
+    width: 90%;
+    margin: 0 auto;
+  }
+
   .cta-container {
     display: flex;
     justify-content: flex-end;
+
+    @include zns-media-query-max(zns-md) {
+      .btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    @include zns-media-query-max(zns-sm) {
+      .btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+      }
+    }
   }
-  //   .table-header {
-  //     display: flex;
-  //     align-items: center;
-  //     justify-content: space-between;
-  //     .filter-container {
-  //     display: flex;
-  //     align-items: center;
-  //     justify-content: space-between;
-  //     }
-  //   }
+
+  .table-content {
+    margin-top: 1rem;
+
+    // Add any o
+
+    .table-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      @include zns-media-query-max(zns-sm) {
+        flex-direction: column;
+      }
+
+      .table-title {
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: Inter;
+      }
+
+      .table-filter {
+        display: flex;
+        align-items: center;
+
+        .input-width {
+          width: 7.5467rem;
+        }
+
+        .search {
+          flex-direction: column;
+          align-items: flex-start;
+          flex: 1 0 0;
+        }
+
+        .filter {
+          align-items: center;
+          flex: 1 0 0;
+        }
+      }
+    }
+  }
+
+  .ng-continer {
+    height: 100%;
+    @include zns-media-query-max(zns-sm) {
+      overflow: auto;
+    }
+
+    .table-responsive {
+      overflow-x: auto;
+    }
+  }
+
+  .table-action-col {
+    display: flex;
+    justify-content: left;
+
+    img {
+      margin-right: 1rem;
+    }
+  }
 }

@@ -12,7 +12,7 @@ export class NewWarehouseComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public editdata: any,
     public dialogRef: MatDialogRef<NewWarehouseComponent>
   ) {}
 
@@ -21,13 +21,16 @@ export class NewWarehouseComponent implements OnInit {
       warehouseName: ['', Validators.required],
       warehouseCode: ['', Validators.required],
     });
+
+    if(this.editdata){
+      this.warehouseForm.controls['wareHouseName'].setValue(this.editdata.wareHouseName); 
+      this.warehouseForm.controls['wareHouseCode'].setValue(
+        this.editdata.wareHouseCode
+      ); 
+    }
   }
 
-  // onSubmitForm(){
-  //   if (this.warehouseForm.valid){
-  //     console.log(this.warehouseForm.value);
-  //   }
-  // }
+
   addWarehouse(){
     console.log(this.warehouseForm.value);
   }
@@ -35,7 +38,13 @@ export class NewWarehouseComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  cancelDialogue(){
-      console.log('Cancel button clicked');
+  submitForm(){
+    if (this.warehouseForm.valid) {
+      const warehouseName = this.warehouseForm.value;
+      const warehouseCode = this.warehouseForm.value;
+ 
+      console.log(warehouseName,warehouseCode);
+      this.dialogRef.close();
+    }
   }
 }
