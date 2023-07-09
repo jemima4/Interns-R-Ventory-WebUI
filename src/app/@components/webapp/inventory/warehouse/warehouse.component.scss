@@ -1,54 +1,7 @@
 @use "../.././../../@core/styles/abstracts/media-query" as *;
 
-// #warehouse {
-//   width: 100%;
-//   overflow-x: hidden;
-//   .cta-container {
-//     display: flex;
-//     justify-content: flex-end;
-
-//     // @include zns-media-query-max(zns-md) {
-//     //  font-size: 1.2rem;
-//     // }
-
-//   }
-
-//   .table-header {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     width: 100%;
-
-//     .table-title {
-//       font-size: 1rem;
-//       font-weight: 500;
-//       font-family: Inter;
-//     }
-
-//     .table-filter {
-//       display: flex;
-
-//       .input-width {
-//         width: 7.5467rem;
-//       }
-
-//       .search {
-//         flex-direction: column;
-//         align-items: flex-start;
-//         flex: 1 0 0;
-//       }
-
-//       .filter {
-//         align-items: center;
-//         flex: 1 0 0;
-//       }
-//     }
-//   }
-// }
-
 #warehouse {
   width: 100%;
- 
 
   @include zns-media-query-max(zns-sm) {
     width: 90%;
@@ -76,16 +29,17 @@
 
   .table-content {
     margin-top: 1rem;
-    
-
 
     // Add any o
 
     .table-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       width: 100%;
+
+      @include zns-media-query-max(zns-sm) {
+        flex-direction: column;
+      }
 
       .table-title {
         font-size: 1rem;
@@ -95,10 +49,7 @@
 
       .table-filter {
         display: flex;
-
-        @include zns-media-query-max(zns-sm) {
-          flex-wrap: wrap;
-        }
+        align-items: center;
 
         .input-width {
           width: 7.5467rem;
@@ -117,6 +68,7 @@
       }
     }
   }
+
   .ng-continer {
     height: 100%;
     @include zns-media-query-max(zns-sm) {
@@ -127,28 +79,13 @@
       overflow-x: auto;
     }
   }
+
+  .table-action-col {
+    display: flex;
+    justify-content: left;
+
+    img {
+      margin-right: 1rem;
+    }
+  }
 }
-// .table-container {
-//   width: 100%;
-//   overflow-x: auto;
-// }
-
-// .mat-elevattion-z8 {
-//   width: 100%;
-//   table-layout: fixed;
-
-//    .mat-column-categoriesName,
-//   .mat-column-createdBy,
-//   .mat-column-date,
-//   .mat-column-updatedBy,
-//   .mat-column-updateDate,
-//   .mat-column-status,
-//   .mat-column-action {
-//     .mat-cell {
-//       white-space: normal;
-//       word-wrap: break-word;
-//     }
-//   }
-// }
-
-// }
