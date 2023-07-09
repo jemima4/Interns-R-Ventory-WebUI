@@ -3,6 +3,12 @@
     display: flex;
     justify-content: right;
 
+    .mob-change {
+      @media (max-width: 799px) {
+        font-size: 0.7rem !important;
+      }
+    }
+
     button {
       margin-right: 1rem;
     }
