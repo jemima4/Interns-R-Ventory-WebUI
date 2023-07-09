@@ -6,10 +6,10 @@
     </div>
 
     <div class="form-container">
-      <form [formGroup]="loginForm">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmitForm()">
         <div class="row">
           <div class="col-12">
-            <div class="input-style1 input-lg">
+            <div class="input-style1 input-md">
               <mat-form-field appearance="outline">
                 <input matInput placeholder="Username"
                 formControlName="username"/>
@@ -18,7 +18,7 @@
           </div>
 
           <div class="col-12">
-            <div class="input-style1 input-lg">
+            <div class="input-style1 input-md">
               <mat-form-field appearance="outline">
                 <input matInput placeholder="Password" 
                  formControlName="password"
