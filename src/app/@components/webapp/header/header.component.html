@@ -1,6 +1,6 @@
 <div id="rv-header">
   <mat-toolbar class="rv-navbar">
-    <div>{{ title }}</div>
+    <div class="page-title">{{ title }}</div>
 
     <div>
       <span><img src="/assets/icons/alert.svg" alt="alert-svg" /></span>
@@ -8,6 +8,7 @@
       <span><img src="/assets/icons/profile_1.svg" alt="profile" /></span>
     </div>
   </mat-toolbar>
-
-  <app-breadcrumb></app-breadcrumb>
+  <div class="breader">
+    <app-breadcrumb></app-breadcrumb>
+  </div>
 </div>

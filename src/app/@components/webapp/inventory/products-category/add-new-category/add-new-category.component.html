@@ -1,0 +1,40 @@
+<section id="new-category-modal">
+  <div class="test-modal-header">
+    <h6 class="zns-heading-6 fw-700 mb-0">Create New Product Category</h6>
+    <div matRipple class="close-icon-container" (click)="closeDialog()">
+      <img src="/assets/icons/modal-close-icon.svg" alt="modal close icon" />
+    </div>
+  </div>
+
+  <div class="add-form">
+    <p>Category Information</p>
+    <form [formGroup]="categoryForm">
+      <div class="cat-form">
+        <input
+          formControlName="categoryName"
+          type="text"
+          placeholder="Category Name"
+        />
+      </div>
+    </form>
+
+    <div class="bottom-btn">
+      <button
+        matRipple
+        class="btn zns-btn-primary-outline zns-btn-md"
+        type="button"
+        (click)="closeDialog()"
+      >
+        Cancel
+      </button>
+      <button
+        type="submit"
+        matRipple
+        class="btn zns-btn-primary zns-btn-md"
+        (click)="onSubmit()"
+      >
+        Add
+      </button>
+    </div>
+  </div>
+</section>

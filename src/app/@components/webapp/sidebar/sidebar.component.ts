@@ -2,6 +2,7 @@ import {
   Component,
   EventEmitter,
   HostListener,
+  Input,
   OnInit,
   Output,
 } from '@angular/core';
@@ -37,6 +38,7 @@ interface SideNavToggle {
 })
 export class SidebarComponent implements OnInit {
   @Output() onToggleSideNav = new EventEmitter<SideNavToggle>();
+  mobile_close = true;
 
   ngOnInit(): void {
     this.screenWidth = window.innerWidth;
@@ -44,6 +46,11 @@ export class SidebarComponent implements OnInit {
 
   collapsed = false;
   screenWidth = 0;
+
+  mobileView() {
+    this.mobile_close = false;
+    this.innerToggle();
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -57,8 +64,15 @@ export class SidebarComponent implements OnInit {
     }
   }
 
+  innerToggle() {
+    this.collapsed = true;
+  }
+
   toggleCollapse(): void {
     this.collapsed = !this.collapsed;
+    if (this.mobile_close === false) {
+      this.mobile_close = true;
+    }
     this.onToggleSideNav.emit({
       collapsed: this.collapsed,
       screenWidth: this.screenWidth,
@@ -67,6 +81,9 @@ export class SidebarComponent implements OnInit {
 
   closeSidenav(): void {
     this.collapsed = false;
+    if (this.mobile_close === false) {
+      this.mobile_close = true;
+    }
     this.onToggleSideNav.emit({
       collapsed: this.collapsed,
       screenWidth: this.screenWidth,
