@@ -9,7 +9,7 @@ import { ProcurementRoutingModule } from './procurement-routing.module';
 
 @NgModule({
   declarations: [ProcurementComponent],
-  imports: [CommonModule, HeaderModule, ProcurementRoutingModule],
-  exports: [RouterModule],
+  imports: [CommonModule, ProcurementRoutingModule],
+  exports: [],
 })
 export class ProcurementModule {}
