@@ -57,19 +57,21 @@
 //   font-weight: 900;
 // }
 
-// .zns-display-1 {
-//   font-size: 4.5rem;
-//   color: var(--zns-black);
-// }
+.zns-display-1 {
+  font-size: 4.5rem;
+  color: var(--zns-black);
+}
 
-// .zns-display-2 {
-//   font-size: 3.75rem;
-//   color: var(--zns-black);
-// }
+.zns-display-2 {
+  font-size: 3.75rem;
+  color: var(--zns-black);
+}
 
 .zns-heading {
   font-size: 4rem;
   color: var(--zns-black);
+  font-family: 'Poppins', sans-serif;
+
 
   @include zns-media-query-max(zns-md) {
     font-size: 2.225rem;
@@ -79,6 +81,7 @@
 .zns-heading-1 {
   font-size: 3rem;
   color: var(--zns-black);
+  font-family: "Poppins", sans-serif;
 
   @include zns-media-query-max(zns-md) {
     font-size: 2.125rem;
@@ -88,6 +91,7 @@
 .zns-heading-2 {
   font-size: 2.5rem;
   color: var(--zns-black);
+  font-family: "Poppins", sans-serif;
 
   @include zns-media-query-max(zns-md) {
     font-size: 2.0625rem;
@@ -97,6 +101,7 @@
 .zns-heading-3 {
   font-size: 2.0625rem;
   color: var(--zns-black);
+  font-family: "Poppins", sans-serif;
 
   @include zns-media-query-max(zns-md) {
     font-size: 1.75rem;
@@ -115,6 +120,7 @@
 .zns-heading-5 {
   font-size: 1.4375rem;
   color: var(--zns-black);
+  font-family: "Poppins", sans-serif;
 
   @include zns-media-query-max(zns-md) {
     font-size: 1.1875rem;
@@ -124,6 +130,7 @@
 .zns-heading-6 {
   font-size: 1.1875rem;
   color: var(--zns-black);
+  font-family: "Poppins", sans-serif;
 
   @include zns-media-query-max(zns-md) {
     font-size: 1rem;
@@ -132,38 +139,45 @@
 
 .zns-sub-heading {
   font-size: 1.25rem;
+  font-family: 'Inter', sans-serif;
   color: var(--zns-black);
 }
 
 .zns-para-3 {
   font-size: 1.125rem;
+  font-family: 'Inter', sans-serif;
   color: var(--zns-black);
 }
 
 .zns-para-2 {
   font-size: 1rem;
+  font-family: 'Inter', sans-serif;
   color: var(--zns-black);
   margin-bottom: 0;
 }
 
 .zns-para-1 {
   font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
   color: var(--zns-black);
 }
 
 .zns-para {
   font-size: 0.625rem;
+  font-family: 'Inter', sans-serif;
   margin-bottom: 0;
 }
 
 .zns-caption {
   font-size: 0.75rem;
+  font-family: 'Inter', sans-serif;
   color: var(--zns-black);
   margin-bottom: 0;
 }
 
 .zns-footer {
   font-size: 0.25rem;
+  font-family: 'Inter', sans-serif;
   color: var(--zns-black);
 }
 

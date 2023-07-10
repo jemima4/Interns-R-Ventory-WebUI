@@ -1,3 +1,5 @@
+@use "src/app/@core/styles/abstracts/media-query" as *;
+
 #rv-header {
   .rv-navbar {
     justify-content: space-between;
@@ -5,7 +7,7 @@
     background: #ffffff3b;
 
     .page-title {
-      @media (max-width: 768px) {
+      @include zns-media-query-max(zns-sm) {
         margin-left: 2rem;
       }
     }

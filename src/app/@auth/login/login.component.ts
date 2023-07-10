@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/@core/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,11 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   loginForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, private router:Router) {}
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private authService: AuthService
+  ) {}
 
   ngOnInit() {
     this.buildLoginForm();
@@ -30,5 +35,8 @@ export class LoginComponent {
     }
   }
 
- 
+  onButtonClick() {
+    this.authService.login();
+    this.router.navigate(['app']);
+  }
 }

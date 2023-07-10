@@ -11,8 +11,11 @@
           <div class="col-12">
             <div class="input-style1 input-md">
               <mat-form-field appearance="outline">
-                <input matInput placeholder="Username"
-                formControlName="username"/>
+                <input
+                  matInput
+                  placeholder="Username"
+                  formControlName="username"
+                />
               </mat-form-field>
             </div>
           </div>
@@ -20,8 +23,10 @@
           <div class="col-12">
             <div class="input-style1 input-md">
               <mat-form-field appearance="outline">
-                <input matInput placeholder="Password" 
-                 formControlName="password"
+                <input
+                  matInput
+                  placeholder="Password"
+                  formControlName="password"
                 />
               </mat-form-field>
             </div>
@@ -31,7 +36,7 @@
         <button
           matRipple
           class="btn zns-btn-primary zns-btn-md zns-btn-full"
-          (click)="onSubmitForm()"
+          (click)="onButtonClick()"
         >
           Login
         </button>

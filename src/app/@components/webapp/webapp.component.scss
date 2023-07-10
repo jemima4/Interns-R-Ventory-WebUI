@@ -1,3 +1,5 @@
+@use "src/app/@core/styles/abstracts/media-query" as *;
+
 #webapp {
   .body {
     width: calc(100% - 5rem);
@@ -10,7 +12,7 @@
     background: #ffffff;
     padding: 0 0.3rem 3rem 0.3rem;
 
-    @media (max-width: 768px) {
+    @include zns-media-query-max(zns-sm) {
       width: 100%;
       margin-left: 0;
     }
@@ -30,7 +32,7 @@
   color: #161414;
   opacity: 0.7;
 
-  @media (min-width: 769px) {
+  @include zns-media-query-min(zns-md) {
     display: none;
   }
 }

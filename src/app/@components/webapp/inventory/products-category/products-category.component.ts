@@ -94,6 +94,7 @@ export class ProductsCategoryComponent implements OnInit, OnDestroy {
     'createdBy',
     'date',
     'lastToUpdate',
+    'updated',
     'status',
     'action',
   ];
@@ -105,11 +106,10 @@ export class ProductsCategoryComponent implements OnInit, OnDestroy {
 
   openForm() {
     const popUp = this.dialog.open(AddNewCategoryComponent, {
-      width: '26.4375rem',
-      height: '19.8125rem',
       backdropClass: 'zns-dialog-backdrop',
       autoFocus: true,
-      panelClass: 'dialog-test',
+      panelClass: 'zns-dialog',
+      disableClose: true,
 
       data: {
         name: 'Omotosho Kolawole',
