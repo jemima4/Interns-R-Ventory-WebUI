@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatRippleModule } from '@angular/material/core';
 import { HeaderModule } from '../../header/header.module';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [VendorsComponent],
@@ -29,6 +30,7 @@ import { HeaderModule } from '../../header/header.module';
     MatFormFieldModule,
     MatInputModule,
     MatRippleModule,
+    MatPaginatorModule,
   ],
   exports: [VendorsComponent],
 })

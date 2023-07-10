@@ -14,6 +14,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [ProductsCategoryComponent, AddNewCategoryComponent],
@@ -31,6 +32,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatTableModule,
     MatInputModule,
     MatSlideToggleModule,
+    MatPaginatorModule,
   ],
   exports: [ProductsCategoryComponent],
   entryComponents: [AddNewCategoryComponent],

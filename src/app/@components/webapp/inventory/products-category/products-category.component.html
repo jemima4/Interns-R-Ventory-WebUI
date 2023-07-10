@@ -244,6 +244,10 @@
           <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
         </table>
       </div>
+      <mat-paginator
+      [length]="5"
+      [pageSizeOptions]="[5, 10, 15, 20]"
+    ></mat-paginator>
     </ng-container>
   </div>
 </section>
