@@ -94,6 +94,7 @@ export class ProductsCategoryComponent implements OnInit, OnDestroy {
     'createdBy',
     'date',
     'lastToUpdate',
+    'updated',
     'status',
     'action',
   ];
